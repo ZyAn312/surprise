@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="banner">
+        <h2 data-text="...I_Love_You_Aymann..." >...I_Love_You_Aymann...</h2>
+        <div id="bg"></div>
+    </div>
+
+    <script>
+        let bg = document.querySelector('#bg');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            bg.style.backgroundSize = 100 + value*2 +"px"
+        })
+    </script>
+</body>
+</html>

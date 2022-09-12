@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 2000px;
+    background-color: #252839;
+    font-family: 'Playfair Display', serif;
+}
+.banner{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+#bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white url(./heart-svgrepo-com.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
+    mix-blend-mode: screen;
+    
+}
+h2{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    font-size: 8vw;
+    color: #252839;
+    -webkit-text-stroke: 0.2vw #252839;
+    text-transform: uppercase;
+}
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #C21010;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid #C21010;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
+}
